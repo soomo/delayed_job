@@ -1,3 +1,6 @@
+require 'yaml'
+YAML::ENGINE.yamler = 'syck' if defined?(YAML::ENGINE)
+
 module Delayed
   module Backend
     class DeserializationError < StandardError
